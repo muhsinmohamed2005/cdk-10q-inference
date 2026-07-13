@@ -5,7 +5,7 @@ client = boto3.client("bedrock-runtime", region_name="us-east-1")
 MODEL_ID = os.environ.get("BEDROCK_MODEL_ID", "us.anthropic.claude-sonnet-4-5-20250929-v1:0")
 
 response = client.converse(
-    modelId="us.anthropic.claude-sonnet-4-5-20250929-v1:0",
+    modelId=MODEL_ID,
     messages=[
         {
             "role": "user",
